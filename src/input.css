@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@source "../index.html";
+
+@layer utilities {
+  .mainColor {
+    color: #f36503;
+  }
+  .bg-mainColor {
+    background-color: #0d0d0d;
+  }
+  .bg-secondColor {
+    background-color: #f36503;
+  }
+  .bg-thirdColor {
+    background-color: #282828;
+  }
+  .min-h-80vh {
+    min-height: 80vh;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
+}
+@layer components {
+  .container {
+    width: 95% !important;
+  }
+  @media (min-width: 640px) {
+    .container {
+      max-width: 90vw !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 85vw !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 80vw !important;
+    }
+  }
+}
+@theme {
+  --padding-big: 50px;
+  --padding-large: 110px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1028px;
+  --breakpoint-xl: 1440px;
+}
+
+@layer base {
+  h1 {
+    font-family: "Syncopate", sans-serif;
+  }
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+}

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>StudyFlow</title>
+  </head>
+  <body class="relative bg-mainColor text-black no-scrollbar">
+    <header class="absolute top-5 left-1/2 -translate-x-1/2 z-30 w-full">
+      <div class="container mx-auto flex justify-between mx-auto">
+        <span class="text-2xl font-bold sm:text-3xl mainColor">StudyFlow</span>
+        <div class="space-x-5 hidden min-[640px]:block">
+          <a href="#hero_frame" class="relative inline-block hover:text-[#f36503] group"
+            >Главная
+            <span
+              class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
+            ></span
+          ></a>
+          <a href="#opport_frame" class="relative inline-block group hover:text-[#f36503]"
+            >Возможности
+            <span
+              class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="#tar_frame"
+            class="bg-secondColor rounded-4xl text-white pl-4 pr-1 py-1 inline-flex items-center group transition-all duration-300 hover:bg-white outline-[#f36503] outline"
+            ><span class="transition-all duration-300 group-hover:opacity-0"
+              >Тарифы</span
+            >
+            <span
+              class="ml-3 w-8 h-8 rounded-full bg-white text-black inline-flex items-center justify-center transition-all duration-300 font-bold text-s group-hover:-translate-x-22 group-hover:bg-[#f36503] group-hover:text-white"
+              >→</span
+            ></a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="bg-thirdColor" id="hero_frame">
+        <div
+          class="relative min-h-screen bg-[url('../img/hero1.jpg')] bg-cover bg-center rounded-b-3xl"
+        >
+          <div class="pt-20 sm:pt-large w-3/5 mx-auto">
+            <p class="text-xl md:text-2xl text-center font-bold pb-2">
+              Учеба — это не хаос. Это система.
+            </p>
+            <p class="text-base text-center md:text-xl">
+              Персональный ассистент, который строит твоё идеальное расписание 
+              и готовит к сессии автоматически.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-thirdColor rounded-b-4xl h-70 flex items-center justify-center"
+      >
+        <div
+          class="container mx-auto flex justify-between text-white font-bold mx-auto text-xl items-center justify-center flex-col gap-5 sm:flex-row sm:text-xl md:text-3xl lg:text-4xl text-center"
+        >
+          <h1 ><a  href="#" >Умное расписание</a></h1>
+          <h1 ><a href="#">Визуальный прогресс</a></h1>
+          <h1><a  href="#">Режим "Сессия"</a></h1>
+          <h1 ><a  href="#">Импорт пар</h1>
+        </div>
+      </section>
+      <section id="oppot_frame">
+        <div class="container mx-auto pt-large pb-[50px]">
+          <div class="text-white mb-10">
+            <h1 class="text-xl sm:text-3xl text-center font-bold pb-3">
+              Почему StudyFlow <span class="mainColor uppercase">лучше</span><br> обычных планировщиков?
+            </h1>
+            <p class=" text-base sm:text-xl text-center">
+              Мы создали инструмент, который понимает специфику учебного процесса 
+              и помогает сосредоточиться на главном — на учёбе.
+            </p>
+          </div>
+          <div
+            class="flex justify-center gap-x-10 flex-wrap items-center gap-y-10"
+          >
+            <div
+              class="flex text-white w-86 h-55 justify-center flex-col space-y-2 bg-thirdColor rounded-xl px-8 py-5 transition-all duration-300 hover:scale-105"
+            >
+              <span class="h-9 w-9 rounded-full bg-secondColor flex items-center justify-center">📅</span>
+              <h1 class="mt-2">Структурное расписание</h1>
+              <p class="w-full">
+                Готовая иерархия под учебный процесс. Не нужно придумывать систему с нуля.
+              </p>
+            </div>
+            <div
+              class="flex w-86 h-55 justify-center  text-white flex-col space-y-2 bg-thirdColor rounded-xl px-8 py-5 transition-all duration-300 hover:scale-105"
+            >
+              <span class="h-9 w-9 rounded-full bg-secondColor flex items-center justify-center">🎯</span>
+              <h1 class="mt-2">Тепловая карта нагрузки</h1>
+              <p class="w-full">
+                Наглядная визуализация загруженности по неделям. Видишь пики и вовремя распределяешь силы.
+              </p>
+            </div>
+            <div
+              class="flex text-white w-86 h-55 justify-center  flex-col space-y-2 bg-thirdColor rounded-xl px-8 py-5 transition-all duration-300 hover:scale-105"
+            >
+              <span class="h-9 w-9 rounded-full bg-secondColor flex items-center justify-center">🚀</span>
+              <h1 class="mt-2 pb-2">В 2 раза быстрее конкурентов</h1>
+              <p class="w-full">
+                Наш интерфейс работает значительно быстрее.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container mx-auto pt-big sm:pt-large">
+          <div class="flex flex-col text-white">
+            <h1 class="text-xl sm:text-3xl font-bold pb-3 text-center">
+              Ключевые возможности<br /><span class="mainColor">для успешной учёбы</span>
+            </h1>
+            <p class="w-full text-center text-base sm:text-xl">
+              Всё, что нужно современному студенту для эффективного планирования 
+              и достижения академических целей.
+            </p>
+          </div>
+          <div
+            class="flex justify-center items-center gap-x-5 gap-y-5 mt-10 flex-wrap mb-15 mt-15"
+          >
+            <div
+              class="w-70 h-94 md:w-80 md:h-104 bg-thirdColor rounded-xl overflow-hidden shadow-lg transition-all duration-250 hover:-translate-y-1"
+            >
+              <div class="h-1/2">
+                <img
+                  src="img/first_img.jpg"
+                  alt="card image"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="h-1/2 p-5 flex flex-col text-white">
+                <h3 class="text-lg font-bold mb-2">Планирование сессии</h3>
+                <p class="text-sm opacity-80">
+                  Автоматическое распределение подготовки к экзаменам с учётом 
+                  сложности предметов и оставшегося времени.
+                </p>
+              </div>
+            </div>
+            <div
+              class="w-70 h-94 md:w-80 md:h-104 bg-thirdColor rounded-xl overflow-hidden shadow-lg transition-all duration-250 hover:-translate-y-1"
+            >
+              <div class="h-1/2">
+                <img
+                  src="img/second_img.jpg"
+                  alt="card image"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="h-1/2 p-5 flex flex-col text-white">
+                <h3 class="text-lg font-bold mb-2">Импорт расписания</h3>
+                <p class="text-sm opacity-80">
+                  Загрузи .ics-файл из личного кабинета университета — 
+                  и все пары появятся в твоём календаре автоматически.
+                </p>
+              </div>
+            </div>
+            <div
+              class="w-70 h-94 md:w-80 md:h-104 bg-thirdColor rounded-xl overflow-hidden shadow-lg transition-all duration-250 hover:-translate-y-1"
+            >
+              <div class="h-1/2">
+                <img
+                  src="img/third_img.jpg"
+                  alt="card image"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="h-1/2 p-5 flex flex-col text-white">
+                <h3 class="text-lg font-bold mb-2">Групповые проекты</h3>
+                <p class="text-sm opacity-80">
+                  Работайте над курсовыми и лабораторными вместе. Распределяйте задачи, 
+                  отслеживайте прогресс команды и дедлайны.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="px-5 py-2 bg-secondColor text-black shadow-xs rounded-4xl mx-auto block text-white font-bold mb-30 cursor-pointer transition-all duration-150 hover:bg-white hover:text-[#f36503] active:bg-white active:translate-y-1 active:text-[#f36503]"
+          >
+            Попробовать бесплатно
+          </button>
+        </div>
+      </section id="tar_frame">
+      <footer class="bg-white text-black rounded-t-3xl">
+        <div
+          class="container grid mx-auto py-12 grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-start"
+        >
+          <div class="place-items-center md:place-items-start">
+            <h3 class="text-xl font-bold mb-2">StudyFlow</h3>
+            <hr class="h-[6px] w-28 mainColor mb-2" />
+            <p class="text-sm text-gray-600">
+              Персональный менеджер учебных задач, созданный студентами для студентов. 
+              Мы помогаем превратить учебный хаос в чёткую систему.
+            </p>
+          </div>
+          <div class="place-items-center md:place-items-start">
+            <h4 class="font-semibold mb-3">Навигация</h4>
+            <ul class="space-y-2 text-s text-gray-600">
+              <li><a href="#hero_frame" class="hover:underline">Главная</a></li>
+              <li><a href="#opport_frame" class="hover:underline">Возможности</a></li>
+              <li><a href="#tar_frame" class="hover:underline">Тарифы</a></li>
+            </ul>
+          </div>
+          <div class="place-items-center md:place-items-start">
+            <h4 class="font-semibold mb-3">Контакты</h4>
+            <p class="text-sm text-gray-600">
+              Есть вопросы или предложения? Мы всегда на связи.
+            </p>
+            <p class="text-sm text-gray-600 mt-2">Email: info@example.com</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
