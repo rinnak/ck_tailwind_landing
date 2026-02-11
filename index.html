@@ -16,7 +16,13 @@
     <header class="absolute top-5 left-1/2 -translate-x-1/2 z-30 w-full">
       <div class="container mx-auto flex justify-between mx-auto">
         <span class="text-2xl font-bold sm:text-3xl mainColor">StudyFlow</span>
-        <div class="space-x-5 hidden min-[640px]:block">
+        <div class="space-x-5 hidden min-[660px]:block">
+          <a href="index.html" class="relative inline-block hover:text-[#f36503] group"
+            >Главная
+            <span
+              class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
+            ></span
+          ></a>
           <a href="contacts.html" class="relative inline-block hover:text-[#f36503] group"
             >Контакты
             <span
@@ -60,8 +66,11 @@
         </div>
       </section>
       <section
-        class="bg-thirdColor rounded-b-4xl h-70 flex items-center justify-center"
+        class=" relative bg-thirdColor rounded-b-4xl h-70 flex items-center justify-center"
       >
+       <div
+          class="absolute -left-30 top-4/5 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-secondColor opacity-40 blur-3xl -z-10 animate-pulse"
+        ></div>
         <div
           class="container mx-auto flex justify-between text-white font-bold mx-auto text-xl items-center justify-center flex-col gap-5 sm:flex-row sm:text-xl md:text-3xl lg:text-4xl text-center"
         >
@@ -115,7 +124,10 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="min-h-screen w-full overflow-hidden realtive">
+                <div
+          class="absolute bottom-10 right-20 w-[400px] h-[400px] rounded-full bg-secondColor opacity-40 blur-3xl -z-10 animate-pulse"
+        ></div>
         <div class="container mx-auto pt-big sm:pt-large">
           <div class="flex flex-col text-white">
             <h1 class="text-xl sm:text-3xl font-bold pb-3 text-center">
@@ -183,6 +195,7 @@
                 </p>
               </div>
             </div>
+            
           </div>
           <button
             class="px-5 py-2 bg-secondColor text-black shadow-xs rounded-4xl mx-auto block text-white font-bold mb-30 cursor-pointer transition-all duration-150 hover:bg-white hover:text-[#f36503] active:bg-white active:translate-y-1 active:text-[#f36503]"

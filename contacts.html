@@ -18,7 +18,7 @@
     >
       <div class="container py-5 mx-auto flex justify-between mx-auto">
         <span class="text-2xl font-bold sm:text-3xl mainColor">StudyFlow</span>
-        <div class="space-x-5 hidden min-[640px]:block">
+        <div class="space-x-5 hidden min-[660px]:block">
           <a
             href="index.html"
             class="relative inline-block hover:text-[#f36503] group"
@@ -28,7 +28,15 @@
             ></span
           ></a>
           <a
-            href="#faq.html"
+            href="contacts.html"
+            class="relative inline-block group hover:text-[#f36503]"
+            >Контакты
+            <span
+              class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="faq.html"
             class="relative inline-block group hover:text-[#f36503]"
             >Помощь
             <span
@@ -69,7 +77,13 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="relative min-h-[520px] overflow-hidden">
+        <div
+          class="absolute -left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-secondColor opacity-40 blur-3xl -z-10 animate-pulse"
+        ></div>
+        <div
+          class="absolute -bottom-0 -right-20 w-[300px] h-[300px] rounded-full bg-secondColor opacity-40 blur-3xl -z-10 animate-pulse"
+        ></div>
         <div class="container mx-auto py-big">
           <div class="flex gap-6 flex-wrap justify-center">
             <div
@@ -130,7 +144,7 @@
                   <div class="text-black">
                     <p class="text-sm font-medium">mail</p>
                     <a href="mailto:example@mail.ru" class="text-xs text-wrap">
-                      example@mail.ru
+                      example&#8203;@&#8203;mail.ru
                     </a>
                   </div>
                 </div>
@@ -261,7 +275,7 @@
                 ></textarea>
                 <button
                   type="submit"
-                  class="w-3/5 bg-secondColor text-white px-5 py-2 mt-2 rounded-full cursor-pointer hover:bg-[#D45600]"
+                  class="w-3/5 bg-secondColor text-white px-5 py-2 mt-2 rounded-full cursor-pointer transition-all duration-150 hover:bg-white hover:text-[#f36503]"
                 >
                   Отправить
                 </button>

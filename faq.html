@@ -13,20 +13,30 @@
     <title>StudyFlow</title>
   </head>
   <body class="relative bg-mainColor text-black no-scrollbar">
-    <header class="absolute top-5 left-1/2 -translate-x-1/2 z-30 w-full">
-      <div class="container mx-auto flex justify-between mx-auto">
+    <header
+      class="absolute top-0 left-1/2 -translate-x-1/2 z-30 w-full bg-white"
+    >
+      <div class="container py-5 mx-auto flex justify-between mx-auto">
         <span class="text-2xl font-bold sm:text-3xl mainColor">StudyFlow</span>
-        <div class="space-x-5 hidden min-[640px]:block">
+        <div class="space-x-5 hidden min-[660px]:block">
+          <a
+            href="index.html"
+            class="relative inline-block hover:text-[#f36503] group"
+            >Главная
+            <span
+              class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
+            ></span
+          ></a>
           <a
             href="contacts.html"
-            class="relative inline-block hover:text-[#f36503] group"
+            class="relative inline-block group hover:text-[#f36503]"
             >Контакты
             <span
               class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
             ></span
           ></a>
           <a
-            href="#faq.html"
+            href="faq.html"
             class="relative inline-block group hover:text-[#f36503]"
             >Помощь
             <span
@@ -47,5 +57,187 @@
         </div>
       </div>
     </header>
+    <main>
+      <section class="relative min-h-screen overflow-hidden">
+        <div
+          class="absolute -left-0 top-1/3 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-secondColor opacity-40 blur-3xl -z-10 animate-pulse"
+        ></div>
+        <div
+          class="absolute -bottom-0 -right-20 w-[300px] h-[300px] rounded-full bg-secondColor opacity-40 blur-3xl -z-10 animate-pulse"
+        ></div>
+        <div
+          class="container flex flex-wrap gap-18 mx-auto py-large min-h-screen items-center justify-center"
+        >
+          <div class="text-white">
+            <span
+              class="px-4 text-white text-bold py-1 rounded-full bg-[#f36503]"
+              >FAQ</span
+            >
+            <h1 class="text-3xl min-[510px]:text-4xl min-[740px]:text-5xl mt-5">
+              Ваши часто задаваемые<br /><span class="mainColor">вопросы</span>
+            </h1>
+          </div>
+          <div class="max-w-3xl flex flex-col gap-y-4">
+            <div
+              class="bg-white rounded-2xl overflow-hidden max-w-[390px] min-w-[300px] transition-all duration-300"
+            >
+              <button
+                class="w-full flex outline-none justify-between font-medium items-center gap-5 py-3 px-5 cursor-pointer"
+                onclick="toggleAccordion(this)"
+              >
+                Как начать пользоваться StudyFlow?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  class="shrink-0 relative"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#f36503"
+                    fill-rule="evenodd"
+                    d="M10.157 12.711L4.5 18.368l-1.414-1.414l4.95-4.95l-4.95-4.95L4.5 5.64l5.657 5.657a1 1 0 0 1 0 1.414"
+                  />
+                </svg>
+              </button>
+              <div class="accordeon-content py-3 px-5 hidden">
+                <p>
+                  Зарегистрируйтесь на сайте, выберите подходящий тариф и
+                  начните создавать свое первое расписание. Мы предлагаем
+                  14-дневный бесплатный пробный период для ознакомления со всеми
+                  функциями.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl overflow-hidden max-w-[390px] min-w-[350px] transition-all duration-300"
+            >
+              <button
+                class="w-full text-start flex outline-none justify-between font-medium items-center gap-5 py-3 px-5 cursor-pointer"
+                onclick="toggleAccordion(this)"
+              >
+                Можно ли импортировать расписание из университета?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  class="shrink-0 relative"
+                  viewBox="0 0 12 24"
+                >
+                  <path
+                    fill="#f36503"
+                    fill-rule="evenodd"
+                    d="M10.157 12.711L4.5 18.368l-1.414-1.414l4.95-4.95l-4.95-4.95L4.5 5.64l5.657 5.657a1 1 0 0 1 0 1.414"
+                  />
+                </svg>
+              </button>
+              <div class="accordeon-content py-3 px-5 hidden">
+                <p>
+                  Да! StudyFlow поддерживает импорт расписания в формате .ics из
+                  большинства университетских систем. Просто загрузите файл, и
+                  все пары автоматически появятся в вашем календаре.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl overflow-hidden max-w-[390px] min-w-[350px] transition-all duration-300"
+            >
+              <button
+                class="w-full text-start flex outline-none justify-between font-medium items-center gap-5 py-3 px-5 cursor-pointer"
+                onclick="toggleAccordion(this)"
+              >
+                Как работает режим "Сессия"?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  class="shrink-0 relative"
+                  viewBox="0 0 12 24"
+                >
+                  <path
+                    fill="#f36503"
+                    fill-rule="evenodd"
+                    d="M10.157 12.711L4.5 18.368l-1.414-1.414l4.95-4.95l-4.95-4.95L4.5 5.64l5.657 5.657a1 1 0 0 1 0 1.414"
+                  />
+                </svg>
+              </button>
+              <div class="accordeon-content py-3 px-5 hidden">
+                <p>
+                  Режим "Сессия" автоматически распределяет время на подготовку
+                  к экзаменам с учетом сложности предметов, количества материала
+                  и оставшегося времени. Система создает оптимальный план
+                  подготовки и напоминает о занятиях.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl overflow-hidden max-w-[390px] min-w-[350px] transition-all duration-300"
+            >
+              <button
+                class="w-full text-start flex outline-none justify-between font-medium items-center gap-5 py-3 px-5 cursor-pointer"
+                onclick="toggleAccordion(this)"
+              >
+                Сколько стоит подписка и есть ли пробный период?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  class="shrink-0 relative"
+                  viewBox="0 0 12 24"
+                >
+                  <path
+                    fill="#f36503"
+                    fill-rule="evenodd"
+                    d="M10.157 12.711L4.5 18.368l-1.414-1.414l4.95-4.95l-4.95-4.95L4.5 5.64l5.657 5.657a1 1 0 0 1 0 1.414"
+                  />
+                </svg>
+              </button>
+              <div class="accordeon-content py-3 px-5 hidden">
+                <p>
+                  Мы предлагаем три тарифа: Базовый (399₽/мес), Профессиональный
+                  (999₽/мес) и Премиум (1999₽/мес). Все новые пользователи
+                  получают 14-дневный бесплатный пробный период тарифа
+                  "Профессиональный" без привязки карты.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-white text-black rounded-t-3xl">
+      <div
+        class="container grid mx-auto py-12 grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-start"
+      >
+        <div class="place-items-center md:place-items-start">
+          <h3 class="text-xl font-bold mb-2">StudyFlow</h3>
+          <hr class="h-[6px] w-28 mainColor mb-2" />
+          <p class="text-sm text-gray-600">
+            Персональный менеджер учебных задач, созданный студентами для
+            студентов. Мы помогаем превратить учебный хаос в чёткую систему.
+          </p>
+        </div>
+        <div class="place-items-center md:place-items-start">
+          <h4 class="font-semibold mb-3">Навигация</h4>
+          <ul class="space-y-2 text-s text-gray-600">
+            <li><a href="index.html" class="hover:underline">Главная</a></li>
+            <li>
+              <a href="contacts.html" class="hover:underline">Контакты</a>
+            </li>
+            <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+            <li><a href="404.html" class="hover:underline">Тарифы</a></li>
+          </ul>
+        </div>
+        <div class="place-items-center md:place-items-start">
+          <h4 class="font-semibold mb-3">Контакты</h4>
+          <p class="text-sm text-gray-600">
+            Есть вопросы или предложения? Мы всегда на связи.
+          </p>
+          <p class="text-sm text-gray-600 mt-2">Email: info@example.com</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
