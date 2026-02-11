@@ -12,5 +12,118 @@
     />
     <title>SudyFlow</title>
   </head>
-  <body></body>
+
+  <body class="bg-mainColor">
+    <header
+      class="absolute top-0 left-1/2 -translate-x-1/2 z-30 w-full bg-white"
+    >
+      <div class="container py-5 mx-auto flex justify-between mx-auto">
+        <span class="text-2xl font-bold sm:text-3xl mainColor">StudyFlow</span>
+        <div class="space-x-5 hidden min-[660px]:block">
+          <a
+            href="index.html"
+            class="relative inline-block hover:text-[#f36503] group"
+            >Главная
+            <span
+              class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="contacts.html"
+            class="relative inline-block group hover:text-[#f36503]"
+            >Контакты
+            <span
+              class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="faq.html"
+            class="relative inline-block group hover:text-[#f36503]"
+            >Помощь
+            <span
+              class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="404.html"
+            class="bg-secondColor rounded-4xl text-white pl-4 pr-1 py-1 inline-flex items-center group transition-all duration-300 hover:bg-white outline-[#f36503] outline"
+            ><span class="transition-all duration-300 group-hover:opacity-0"
+              >Тарифы</span
+            >
+            <span
+              class="ml-3 w-8 h-8 rounded-full bg-white text-black inline-flex items-center justify-center transition-all duration-300 font-bold text-s group-hover:-translate-x-22 group-hover:bg-[#f36503] group-hover:text-white"
+              >→</span
+            ></a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="relative w-full h-screen overflow-hidden">
+        <div
+          class="relative h-full bg-[url('../img/hero3.jpg')] bg-cover bg-[position:40%_50%]"
+        >
+          <div
+            class="container relative h-full mx-auto flex items-center justify-end pr-16 max-[900px]:hidden min-[901px]:flex"
+          >
+            <div class="text-center">
+              <h2 class="text-5xl font-bold text-white mb-1">Oops!</h2>
+              <h1 class="text-9xl font-bold mainColor">404</h1>
+              <p class="text-3xl text-white">Страница не найдена...</p>
+            </div>
+          </div>
+
+          <div
+            class="container relative h-full mx-auto flex items-center justify-center max-[900px]:flex min-[901px]:hidden"
+          >
+            <div class="text-center z-999 bg-black/30 rounded-3xl px-12 py-8">
+              <h2
+                class="text-3xl min-[485px]:text-5xl font-bold text-white mb-1"
+              >
+                Oops!
+              </h2>
+              <h1 class="text-8xl min-[485px]:text-9xl font-bold mainColor">
+                404
+              </h1>
+              <p class="text-xl min-[485px]:text-3xl text-white">
+                Страница не найдена...
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="bg-white text-black rounded-t-3xl">
+        <div
+          class="container grid mx-auto py-12 grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-start"
+        >
+          <div class="place-items-center md:place-items-start">
+            <h3 class="text-xl font-bold mb-2">StudyFlow</h3>
+            <hr class="h-[6px] w-28 mainColor mb-2" />
+            <p class="text-sm text-gray-600">
+              Персональный менеджер учебных задач, созданный студентами для
+              студентов. Мы помогаем превратить учебный хаос в чёткую систему.
+            </p>
+          </div>
+          <div class="place-items-center md:place-items-start">
+            <h4 class="font-semibold mb-3">Навигация</h4>
+            <ul class="space-y-2 text-s text-gray-600">
+              <li><a href="index.html" class="hover:underline">Главная</a></li>
+              <li>
+                <a href="contacts.html" class="hover:underline">Контакты</a>
+              </li>
+              <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+              <li><a href="404.html" class="hover:underline">Тарифы</a></li>
+            </ul>
+          </div>
+          <div class="place-items-center md:place-items-start">
+            <h4 class="font-semibold mb-3">Контакты</h4>
+            <p class="text-sm text-gray-600">
+              Есть вопросы или предложения? Мы всегда на связи.
+            </p>
+            <p class="text-sm text-gray-600 mt-2">Email: info@example.com</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
