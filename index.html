@@ -12,24 +12,49 @@
     />
     <title>StudyFlow</title>
   </head>
-  <body class="relative bg-mainColor text-black scrollbar-gutter-stable">
-    <header class="absolute top-5 left-1/2 -translate-x-1/2 z-30 w-full">
-      <div class="container mx-auto flex justify-between mx-auto">
-        <span class="text-2xl font-bold sm:text-3xl mainColor">StudyFlow</span>
-        <div class="space-x-5 hidden min-[660px]:block">
-          <a href="index.html" class="relative inline-block hover:text-[#f36503] group"
+  <body class="relative bg-mainColor text-black scrollbar-gutter-stable overflow-x-hidden">
+        <div id="navOverlay" class="fixed z-30 inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 min-[660px]:hidden"></div>
+
+    <header class="absolute max-[659px]:pt-5 top-0 min-[660px]:top-5 left-1/2 -translate-x-1/2 z-40 w-full">
+      <div class="container mx-auto flex items-center justify-between mx-auto">
+        <span class="text-2xl z-20 font-bold sm:text-3xl mainColor">StudyFlow</span>
+      <button
+        class="max-[659px]:flex min-[660px]:hidden w-[24px] h-[24px] cursor-pointer flex items-center justify-between flex-col menu-toggle z-50"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+      >
+        <span class="menu-toggle__line w-full h-[3px] bg-secondColor rounded-full  transition-all duration-300"></span>
+        <span class="menu-toggle__line w-full h-[3px] bg-secondColor rounded-full  transition-all duration-300"></span>
+        <span class="menu-toggle__line w-full h-[3px] bg-secondColor rounded-full transition-all duration-300"></span>
+      </button>
+        <div class="fixed flex items-center justify-center top-0 right-0 z-40 h-screen w-[260px] bg-white hidden translate-x-full transition-all duration-300 flex-col gap-6 p-8
+
+  min-[660px]:static
+  min-[660px]:translate-x-0
+  min-[660px]:flex
+  min-[660px]:flex-row
+  min-[660px]:h-auto
+  min-[660px]:w-auto
+  min-[660px]:bg-transparent
+  min-[660px]:p-0
+  min-[660px]:gap-5
+  min-[660px]:items-center
+  "
+  id="mainNav">
+          <a href="index.html" class=" nav__item relative inline-block hover:text-[#f36503] group"
             >Главная
             <span
               class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
             ></span
           ></a>
-          <a href="contacts.html" class="relative inline-block hover:text-[#f36503] group"
+          <a href="contacts.html" class="nav__item relative inline-block hover:text-[#f36503] group"
             >Контакты
             <span
               class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
             ></span
           ></a>
-          <a href="#faq.html" class="relative inline-block group hover:text-[#f36503]"
+          <a href="#faq.html" class="nav__item relative inline-block group hover:text-[#f36503]"
             >Помощь
             <span
               class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
@@ -37,7 +62,7 @@
           ></a>
           <a
             href="404.html"
-            class="bg-secondColor rounded-4xl text-white pl-4 pr-1 py-1 inline-flex items-center group transition-all duration-300 hover:bg-white outline-[#f36503] outline"
+            class="nav__item bg-secondColor rounded-4xl text-white pl-4 pr-1 py-1 inline-flex items-center group transition-all duration-300 hover:bg-white outline-[#f36503] outline"
             ><span class="transition-all duration-300 group-hover:opacity-0"
               >Тарифы</span
             >
@@ -77,7 +102,7 @@
           <h1 ><a  href="#" >Умное расписание</a></h1>
           <h1 ><a href="#">Визуальный прогресс</a></h1>
           <h1><a  href="#">Режим "Сессия"</a></h1>
-          <h1 ><a  href="#">Импорт пар</h1>
+          <h1 ><a  href="#">Импорт пар</a></h1>
         </div>
       </section>
       <section id="oppot_frame">
@@ -124,7 +149,7 @@
           </div>
         </div>
       </section>
-      <section class="min-h-screen w-full overflow-hidden realtive">
+      <section class="min-h-screen w-full overflow-hidden relative">
                 <div
           class="absolute bottom-10 right-20 w-[400px] h-[400px] rounded-full bg-secondColor opacity-40 blur-3xl -z-10 animate-pulse"
         ></div>
@@ -235,5 +260,6 @@
         </div>
       </footer>
     </main>
+    <script src="js/menu.js"></script>
   </body>
 </html>
