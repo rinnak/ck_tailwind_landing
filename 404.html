@@ -13,16 +13,41 @@
     <title>SudyFlow</title>
   </head>
 
-  <body class="bg-mainColor">
+  <body class="relative bg-mainColor scrollbar-gutter-stable overflow-x-hidden">
     <header
-      class="absolute top-0 left-1/2 -translate-x-1/2 z-30 w-full bg-white"
+      class="absolute max-[659px]:pt-5 py-5 top-0 left-1/2 -translate-x-1/2 z-40 w-full bg-white"
     >
-      <div class="container py-5 mx-auto flex justify-between mx-auto">
-        <span class="text-2xl font-bold sm:text-3xl mainColor">StudyFlow</span>
-        <div class="space-x-5 hidden min-[660px]:block">
+      <div class="container mx-auto flex items-center justify-between mx-auto">
+        <span class="text-2xl z-20 font-bold sm:text-3xl mainColor"
+          >StudyFlow</span
+        >
+        <div
+          id="navOverlay"
+          class="fixed z-30 h-screen inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 min-[660px]:hidden"
+        ></div>
+        <button
+          class="max-[659px]:flex min-[660px]:hidden w-[24px] h-[24px] cursor-pointer flex items-center justify-between flex-col menu-toggle z-50"
+          id="menuToggle"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span
+            class="menu-toggle__line w-full h-[3px] bg-secondColor rounded-full transition-all duration-300"
+          ></span>
+          <span
+            class="menu-toggle__line w-full h-[3px] bg-secondColor rounded-full transition-all duration-300"
+          ></span>
+          <span
+            class="menu-toggle__line w-full h-[3px] bg-secondColor rounded-full transition-all duration-300"
+          ></span>
+        </button>
+        <div
+          class="fixed flex items-center justify-center top-0 right-0 z-40 h-screen w-[260px] bg-white hidden translate-x-full transition-all duration-300 flex-col gap-6 p-8 min-[660px]:static min-[660px]:translate-x-0 min-[660px]:flex min-[660px]:flex-row min-[660px]:h-auto min-[660px]:w-auto min-[660px]:bg-transparent min-[660px]:p-0 min-[660px]:gap-5 min-[660px]:items-center"
+          id="mainNav"
+        >
           <a
             href="index.html"
-            class="relative inline-block hover:text-[#f36503] group"
+            class="nav__item relative inline-block hover:text-[#f36503] group"
             >Главная
             <span
               class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
@@ -30,7 +55,7 @@
           ></a>
           <a
             href="contacts.html"
-            class="relative inline-block group hover:text-[#f36503]"
+            class="nav__item relative inline-block hover:text-[#f36503] group"
             >Контакты
             <span
               class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
@@ -38,7 +63,7 @@
           ></a>
           <a
             href="faq.html"
-            class="relative inline-block group hover:text-[#f36503]"
+            class="nav__item relative inline-block group hover:text-[#f36503]"
             >Помощь
             <span
               class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
@@ -46,7 +71,7 @@
           ></a>
           <a
             href="404.html"
-            class="bg-secondColor rounded-4xl text-white pl-4 pr-1 py-1 inline-flex items-center group transition-all duration-300 hover:bg-white outline-[#f36503] outline"
+            class="nav__item bg-secondColor rounded-4xl text-white pl-4 pr-1 py-1 inline-flex items-center group transition-all duration-300 hover:bg-white outline-[#f36503] outline"
             ><span class="transition-all duration-300 group-hover:opacity-0"
               >Тарифы</span
             >
@@ -64,7 +89,7 @@
           class="relative h-full bg-[url('../img/hero3.jpg')] bg-cover bg-[position:40%_50%]"
         >
           <div
-            class="container relative h-full mx-auto flex items-center justify-end pr-16 pt-[80px] max-[900px]:hidden min-[901px]:flex"
+            class="container relative h-full mx-auto flex z-5 items-center justify-end pr-16 pt-[80px] max-[900px]:hidden min-[901px]:flex"
           >
             <div class="text-center">
               <h2 class="text-5xl font-bold text-white mb-1">Oops!</h2>
@@ -74,9 +99,9 @@
           </div>
 
           <div
-            class="container pt-[80px] relative h-full mx-auto flex items-center justify-center max-[900px]:flex min-[901px]:hidden"
+            class="container pt-[80px] relative z-20 h-full mx-auto flex items-center justify-center max-[900px]:flex min-[901px]:hidden"
           >
-            <div class="text-center z-999 bg-black/30 rounded-3xl px-12 py-8">
+            <div class="text-center bg-black/30 rounded-3xl px-12 py-8">
               <h2
                 class="text-3xl min-[485px]:text-5xl font-bold text-white mb-1"
               >
@@ -125,5 +150,6 @@
         </div>
       </footer>
     </main>
+    <script src="js/menu.js"></script>
   </body>
 </html>

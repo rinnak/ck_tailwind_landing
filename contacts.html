@@ -12,16 +12,43 @@
     />
     <title>StudyFlow</title>
   </head>
-  <body class="relative bg-mainColor text-black scrollbar-gutter-stable">
+  <body
+    class="relative bg-mainColor text-black scrollbar-gutter-stable overflow-x-hidden"
+  >
     <header
-      class="absolute top-0 left-1/2 -translate-x-1/2 z-30 w-full bg-white"
+      class="absolute max-[659px]:pt-5 bg-white py-5 top-0 left-1/2 -translate-x-1/2 z-40 w-full"
     >
-      <div class="container py-5 mx-auto flex justify-between mx-auto">
-        <span class="text-2xl font-bold sm:text-3xl mainColor">StudyFlow</span>
-        <div class="space-x-5 hidden min-[660px]:block">
+      <div class="container mx-auto flex items-center justify-between mx-auto">
+        <span class="text-2xl z-20 font-bold sm:text-3xl mainColor"
+          >StudyFlow</span
+        >
+        <div
+          id="navOverlay"
+          class="fixed z-30 inset-0 h-screen bg-black/50 opacity-0 invisible transition-all duration-300 min-[660px]:hidden"
+        ></div>
+        <button
+          class="max-[659px]:flex min-[660px]:hidden w-[24px] h-[24px] cursor-pointer flex items-center justify-between flex-col menu-toggle z-50"
+          id="menuToggle"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span
+            class="menu-toggle__line w-full h-[3px] bg-secondColor rounded-full transition-all duration-300"
+          ></span>
+          <span
+            class="menu-toggle__line w-full h-[3px] bg-secondColor rounded-full transition-all duration-300"
+          ></span>
+          <span
+            class="menu-toggle__line w-full h-[3px] bg-secondColor rounded-full transition-all duration-300"
+          ></span>
+        </button>
+        <div
+          class="fixed flex items-center justify-center top-0 right-0 z-40 h-screen w-[260px] bg-white hidden translate-x-full transition-all duration-300 flex-col gap-6 p-8 min-[660px]:static min-[660px]:translate-x-0 min-[660px]:flex min-[660px]:flex-row min-[660px]:h-auto min-[660px]:w-auto min-[660px]:bg-transparent min-[660px]:p-0 min-[660px]:gap-5 min-[660px]:items-center"
+          id="mainNav"
+        >
           <a
             href="index.html"
-            class="relative inline-block hover:text-[#f36503] group"
+            class="nav__item relative inline-block hover:text-[#f36503] group"
             >Главная
             <span
               class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
@@ -29,7 +56,7 @@
           ></a>
           <a
             href="contacts.html"
-            class="relative inline-block group hover:text-[#f36503]"
+            class="nav__item relative inline-block hover:text-[#f36503] group"
             >Контакты
             <span
               class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
@@ -37,7 +64,7 @@
           ></a>
           <a
             href="faq.html"
-            class="relative inline-block group hover:text-[#f36503]"
+            class="nav__item relative inline-block group hover:text-[#f36503]"
             >Помощь
             <span
               class="absolute -bottom-1 left-0 block transition-all bg-[#f36503] duration-300 h-[2px] w-0 group-hover:w-full"
@@ -45,7 +72,7 @@
           ></a>
           <a
             href="404.html"
-            class="bg-secondColor rounded-4xl text-white pl-4 pr-1 py-1 inline-flex items-center group transition-all duration-300 hover:bg-white outline-[#f36503] outline"
+            class="nav__item bg-secondColor rounded-4xl text-white pl-4 pr-1 py-1 inline-flex items-center group transition-all duration-300 hover:bg-white outline-[#f36503] outline"
             ><span class="transition-all duration-300 group-hover:opacity-0"
               >Тарифы</span
             >
@@ -189,8 +216,15 @@
                 <div class="grid grid-cols-2 gap-3 text-white">
                   <div>
                     <label for="name" class="block text-sm font-medium mb-1">
-                      Имя
+                      <span class="relative"
+                        >Имя
+                        <span
+                          class="absolute w-2 h-2 -top-1 -right-3 text-red-500"
+                          >*</span
+                        >
+                      </span>
                     </label>
+
                     <input
                       type="text"
                       id="name"
@@ -204,7 +238,13 @@
                       for="lastname"
                       class="block text-sm font-medium mb-1"
                     >
-                      Фамилия
+                      <span class="relative"
+                        >Фамилия
+                        <span
+                          class="absolute w-2 h-2 -top-1 -right-3 text-red-500"
+                          >*</span
+                        >
+                      </span>
                     </label>
                     <input
                       type="text"
@@ -219,7 +259,13 @@
                       for="phone_number"
                       class="block text-sm font-medium mb-1"
                     >
-                      Номер телефона
+                      <span class="relative"
+                        >Номер телефона
+                        <span
+                          class="absolute w-2 h-2 -top-1 -right-3 text-red-500"
+                          >*</span
+                        >
+                      </span>
                     </label>
                     <input
                       type="tel"
@@ -231,7 +277,13 @@
                   </div>
                   <div>
                     <label for="email" class="block text-sm font-medium mb-1">
-                      Тема
+                      <span class="relative"
+                        >Тема
+                        <span
+                          class="absolute w-2 h-2 -top-1 -right-3 text-red-500"
+                          >*</span
+                        >
+                      </span>
                     </label>
                     <select
                       name="subject"
@@ -266,16 +318,20 @@
                     </select>
                   </div>
                 </div>
+                <label class="checkbox text-white">
+                  <input type="checkbox" required /> Соглашаюсь на обработку
+                  персональных данных
+                </label>
                 <textarea
                   name="meassge"
                   id="message"
-                  class="w-full text-white text-sm outline-none rounded-lg px-5 py-2 border-2 border-white focus:border-[#f36503]"
+                  class="w-full mt-3 text-white text-sm outline-none rounded-lg px-5 py-2 border-2 border-white focus:border-[#f36503]"
                   required
                   placeholder="Опишите ваш вопрос подробнее"
                 ></textarea>
                 <button
                   type="submit"
-                  class="w-3/5 bg-secondColor text-white px-5 py-2 mt-2 rounded-full cursor-pointer transition-all duration-150 hover:bg-white hover:text-[#f36503]"
+                  class="w-3/5 bg-secondColor text-white px-5 py-2 rounded-full cursor-pointer transition-all duration-150 hover:bg-white hover:text-[#f36503]"
                 >
                   Отправить
                 </button>
@@ -328,5 +384,6 @@
         </div>
       </footer>
     </main>
+    <script src="js/menu.js"></script>
   </body>
 </html>
