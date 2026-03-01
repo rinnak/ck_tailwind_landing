@@ -207,12 +207,7 @@
                 <h1 class="mb-1 text-xl">Отправьте сообщение</h1>
               </div>
               <hr class="mainColor mb-6" />
-              <form
-                action="#
-              "
-                method="POST"
-                class="space-y-4"
-              >
+              <form method="POST" class="space-y-4" id="feedbackForm">
                 <div class="grid grid-cols-2 gap-3 text-white">
                   <div>
                     <label for="name" class="block text-sm font-medium mb-1">
@@ -229,9 +224,10 @@
                       type="text"
                       id="name"
                       required
-                      class="w-full text-sm rounded-lg px-5 py-2 border-2 focus:border-[#f36503] outline-none"
+                      class="w-full text-sm rounded-lg px-2 py-2 border-2 focus:border-[#f36503] outline-none"
                       placeholder="Иван"
                     />
+                    <div class="error-container min-h-[20px] mt-2"></div>
                   </div>
                   <div>
                     <label
@@ -250,9 +246,10 @@
                       type="text"
                       id="lastname"
                       required
-                      class="w-full text-sm rounded-lg px-5 py-2 border-2 focus:border-[#f36503] outline-none"
+                      class="w-full text-sm rounded-lg px-2 py-2 border-2 focus:border-[#f36503] outline-none"
                       placeholder="Иванов"
                     />
+                    <div class="error-container min-h-[20px] mt-2"></div>
                   </div>
                   <div>
                     <label
@@ -271,12 +268,13 @@
                       type="tel"
                       id="phone_number"
                       required
-                      class="w-full text-sm rounded-lg px-5 py-2 border-2 focus:border-[#f36503] outline-none"
-                      placeholder="+79000000000"
+                      class="w-full text-sm rounded-lg px-2 py-2 border-2 focus:border-[#f36503] outline-none"
+                      placeholder="+7 (900) 000-00-00"
                     />
+                    <div class="error-container min-h-[20px] mt-2"></div>
                   </div>
                   <div>
-                    <label for="email" class="block text-sm font-medium mb-1">
+                    <label for="subject" class="block text-sm font-medium mb-1">
                       <span class="relative"
                         >Тема
                         <span
@@ -289,7 +287,7 @@
                       name="subject"
                       id="subject"
                       required
-                      class="w-full text-sm rounded-lg px-5 py-2 border-2 focus:border-[#f36503] outline-none"
+                      class="w-full text-sm rounded-lg px-2 py-2 border-2 focus:border-[#f36503] outline-none"
                     >
                       <option value="" class="text-black" disabled selected>
                         Выберите тему
@@ -316,19 +314,44 @@
                         Другое
                       </option>
                     </select>
+                    <div class="error-container min-h-[20px] mt-2"></div>
                   </div>
                 </div>
+                <div class="w-full mt-1 text-white text-sm outline-none">
+                  <label for="email" class="block text-sm font-medium mb-1">
+                    <span class="relative"
+                      >Email
+                      <span
+                        class="absolute w-2 h-2 -top-1 -right-3 text-red-500"
+                        >*</span
+                      >
+                    </span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    class="w-full text-sm rounded-lg px-2 py-2 border-2 focus:border-[#f36503] outline-none"
+                    placeholder="example@mail.ru"
+                  />
+                  <div class="error-container min-h-[20px] mt-2"></div>
+                </div>
                 <label class="checkbox text-white">
-                  <input type="checkbox" required /> Соглашаюсь на обработку
-                  персональных данных
+                  <input type="checkbox" id="agreement" required /> Соглашаюсь
+                  на обработку персональных данных
                 </label>
+                <div
+                  id="agreement-error-container"
+                  class="min-h-[20px] mt-1"
+                ></div>
                 <textarea
                   name="meassge"
                   id="message"
-                  class="w-full mt-3 text-white text-sm outline-none rounded-lg px-5 py-2 border-2 border-white focus:border-[#f36503]"
+                  class="w-full mt-1 text-white text-sm outline-none rounded-lg px-2 py-2 border-2 border-white focus:border-[#f36503]"
                   required
                   placeholder="Опишите ваш вопрос подробнее"
                 ></textarea>
+                <div class="error-container min-h-[20px] mt-2"></div>
                 <button
                   type="submit"
                   class="w-3/5 bg-secondColor text-white px-5 py-2 rounded-full cursor-pointer transition-all duration-150 hover:bg-white hover:text-[#f36503]"
@@ -385,5 +408,6 @@
       </footer>
     </main>
     <script src="js/menu.js"></script>
+    <script src="js/validation.js"></script>
   </body>
 </html>
