@@ -51,11 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const email = document.getElementById("email");
     const emailValue = email.value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailValue === "") {
       showError(email, "Введите email");
       isValid = false;
-    } else if (!emailValue.includes("@") || !emailValue.includes(".")) {
+    } else if (
+      !emailValue.includes("@") ||
+      !emailValue.includes(".") ||
+      !emailPattern.test(emailValue)
+    ) {
       showError(email, "Введите корректный email");
       isValid = false;
     }
